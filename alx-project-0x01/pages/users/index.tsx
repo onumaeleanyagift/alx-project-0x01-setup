@@ -54,7 +54,7 @@ export async function getStaticProps() {
 
   return {
     props: {
-      users,
+      posts: users,
     },
   };
 }
