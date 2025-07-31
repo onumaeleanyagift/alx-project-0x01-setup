@@ -7,7 +7,7 @@ export interface PostProps {
   body: string;
 }
 
-export interface UserProps { 
+export interface UserProps {
   id: number;
   name: string;
   username: string;
@@ -24,7 +24,6 @@ export interface Address {
   suite: string;
   city: string;
   zipcode: string;
-  geo: Geo;
 }
 
 export interface Geo {
@@ -48,4 +47,21 @@ export interface PostData {
 export interface PostModalProps {
   onClose: () => void;
   onSubmit: (post: PostData) => void;
+}
+
+export interface UserData {
+  id: number;
+  name: string;
+  username: string;
+  email: string;
+  address: Address;
+  geo: Geo;
+  phone: string;
+  website: string;
+  company: Company;
+}
+
+export interface UserModalProps {
+  onClose: () => void;
+  onSubmit: (post: UserData) => void;
 }
