@@ -5,7 +5,7 @@ import { PostData, PostProps } from "@/interfaces";
 import { useState } from "react";
 
 const Posts: React.FC<{ posts: PostProps[] }> = ({ posts }) => {
-  const [isModelOpen, setModalOpen] = useState(false);
+  const [isModalOpen, setModalOpen] = useState(false);
   const [post, setPost] = useState<PostData | null>(null);
   
   const handleAddPost = (newPost: PostData) => {
@@ -37,7 +37,7 @@ const Posts: React.FC<{ posts: PostProps[] }> = ({ posts }) => {
         </div>
       </main>
 
-      {isModelOpen && (
+      {isModalOpen && (
         <PostModal onClose={() => setModalOpen(false)}
         onSubmit={handleAddPost} />
       )}
